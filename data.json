@@ -1,0 +1,16 @@
+[
+    {
+        "name": "оромо",
+        "price": "200",
+        "category": "восточная",
+        "availability": "yes",
+        "id": 1
+    },
+    {
+        "name": "qwe",
+        "price": "qw",
+        "category": "qw",
+        "availability": "yes",
+        "id": 2
+    }
+]

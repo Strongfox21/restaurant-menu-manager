@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню ресторана</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h3>Добавить блюдо</h3>
+
+    <input id="name" placeholder="Название">
+    <input id="price" placeholder="Цена">
+    <input id="category" placeholder="Категория">
+    <select id="availability">
+        <option value="yes">В наличии</option>
+        <option value="no">Нет</option>
+    </select>
+    <button onclick="addItem()">Добавить</button>
+
+    <hr>
+
+    <h3>Фильтр</h3>
+    <input id="filter" placeholder="Категория">
+    <button onclick="loadMenu()">Применить</button>
+
+    <button onclick="logout()" class="logout">Выйти</button>
+</div>
+
+<div class="menu" id="menu"></div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: flex;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+}
+
+.sidebar input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+.logout {
+    background: red;
+    color: white;
+}
+
+.menu {
+    flex: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.item h3 {
+    margin: 0 0 5px 0;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    background: red;
+    color: white;
+    width: 100%;
+    padding: 6px;
+    border: none;
+}

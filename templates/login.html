@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <h2>Вход в панель администратора</h2>
+
+        <input id="password" type="password" placeholder="Введите пароль">
+
+        <button onclick="login()">Войти</button>
+
+        <p id="error" class="error"></p>
+    </div>
+</div>
+
+<script>
+async function login() {
+    let password = document.getElementById("password").value;
+
+    let res = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password })
+    });
+
+    let data = await res.json();
+
+    if (data.success) {
+        window.location.href = "/";
+    } else {
+        document.getElementById("error").innerText = "Неверный пароль";
+    }
+}
+</script>
+
+</body>
+</html>
